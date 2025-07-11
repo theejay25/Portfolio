@@ -7,26 +7,22 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-400: oklch(70.4% 0.191 22.216);
-    --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-red-950: oklch(25.8% 0.092 26.042);
-    --color-green-50: oklch(98.2% 0.018 155.826);
-    --color-green-300: oklch(87.1% 0.15 154.449);
-    --color-blue-50: oklch(97% 0.014 254.604);
-    --color-blue-300: oklch(80.9% 0.105 251.813);
+    --color-red-600: oklch(57.7% 0.245 27.325);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-purple-500: oklch(62.7% 0.265 303.9);
-    --color-pink-500: oklch(65.6% 0.241 354.308);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --tracking-wider: 0.05em;
     --radius-md: 0.375rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -205,6 +201,9 @@
   .mt-7 {
     margin-top: calc(var(--spacing) * 7);
   }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -220,14 +219,14 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .inline {
     display: inline;
   }
   .inline-block {
     display: inline-block;
-  }
-  .table {
-    display: table;
   }
   .h-5 {
     height: calc(var(--spacing) * 5);
@@ -238,44 +237,32 @@
   .h-\[5vh\] {
     height: 5vh;
   }
-  .h-\[8vh\] {
-    height: 8vh;
-  }
-  .h-\[15vh\] {
-    height: 15vh;
-  }
   .h-\[18vh\] {
     height: 18vh;
-  }
-  .h-\[20vh\] {
-    height: 20vh;
   }
   .h-\[23vh\] {
     height: 23vh;
   }
-  .h-\[25dvh\] {
-    height: 25dvh;
-  }
-  .h-\[45dvh\] {
-    height: 45dvh;
-  }
   .h-\[51dvh\] {
     height: 51dvh;
-  }
-  .h-\[52dvh\] {
-    height: 52dvh;
   }
   .h-\[52vh\] {
     height: 52vh;
   }
-  .h-\[55dvh\] {
-    height: 55dvh;
-  }
-  .h-fit {
-    height: fit-content;
-  }
   .h-full {
     height: 100%;
+  }
+  .min-h-\[8vh\] {
+    min-height: 8vh;
+  }
+  .min-h-\[12vh\] {
+    min-height: 12vh;
+  }
+  .min-h-\[14vh\] {
+    min-height: 14vh;
+  }
+  .min-h-\[17vh\] {
+    min-height: 17vh;
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
@@ -283,29 +270,11 @@
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
-  .w-70 {
-    width: calc(var(--spacing) * 70);
-  }
-  .w-86 {
-    width: calc(var(--spacing) * 86);
-  }
-  .w-90 {
-    width: calc(var(--spacing) * 90);
-  }
   .w-98 {
     width: calc(var(--spacing) * 98);
   }
-  .w-100 {
-    width: calc(var(--spacing) * 100);
-  }
   .w-\[40\%\] {
     width: 40%;
-  }
-  .w-\[43\%\] {
-    width: 43%;
-  }
-  .w-\[45\%\] {
-    width: 45%;
   }
   .w-\[50\%\] {
     width: 50%;
@@ -313,14 +282,29 @@
   .w-\[60\%\] {
     width: 60%;
   }
+  .w-\[80vw\] {
+    width: 80vw;
+  }
+  .w-\[87vw\] {
+    width: 87vw;
+  }
+  .w-\[90vw\] {
+    width: 90vw;
+  }
+  .w-\[95vw\] {
+    width: 95vw;
+  }
+  .w-fit {
+    width: fit-content;
+  }
   .w-full {
     width: 100%;
   }
-  .border-collapse {
-    border-collapse: collapse;
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .resize {
-    resize: both;
+  .flex-col {
+    flex-direction: column;
   }
   .flex-row {
     flex-direction: row;
@@ -337,14 +321,18 @@
   .justify-center {
     justify-content: center;
   }
-  .justify-end {
-    justify-content: flex-end;
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
-  .gap-0 {
-    gap: calc(var(--spacing) * 0);
+  .space-x-2 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 2) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-x-reverse)));
+    }
   }
-  .overflow-hidden {
-    overflow: hidden;
+  .overflow-y-auto {
+    overflow-y: auto;
   }
   .scroll-auto {
     scroll-behavior: auto;
@@ -352,42 +340,20 @@
   .rounded-md {
     border-radius: var(--radius-md);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
+  .bg-\[\#000\] {
+    background-color: #000;
+  }
+  .bg-\[\#3c3c3c\] {
+    background-color: #3c3c3c;
   }
   .bg-\[\#212121\] {
     background-color: #212121;
   }
-  .bg-\[\#313131\] {
-    background-color: #313131;
-  }
   .bg-black {
     background-color: var(--color-black);
   }
-  .bg-blue-50 {
-    background-color: var(--color-blue-50);
-  }
-  .bg-green-50 {
-    background-color: var(--color-green-50);
-  }
-  .bg-green-300 {
-    background-color: var(--color-green-300);
-  }
-  .bg-pink-500 {
-    background-color: var(--color-pink-500);
-  }
   .bg-purple-500 {
     background-color: var(--color-purple-500);
-  }
-  .bg-red-400 {
-    background-color: var(--color-red-400);
-  }
-  .bg-red-500 {
-    background-color: var(--color-red-500);
-  }
-  .bg-red-950 {
-    background-color: var(--color-red-950);
   }
   .bg-gradient-to-b {
     --tw-gradient-position: to bottom in oklab;
@@ -395,10 +361,6 @@
   }
   .from-transparent {
     --tw-gradient-from: transparent;
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .to-black {
-    --tw-gradient-to: var(--color-black);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-black\/80 {
@@ -426,9 +388,16 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .text-center {
+    text-align: center;
+  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -442,15 +411,12 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
+  }
   .text-white {
     color: var(--color-white);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .hover\:text-gray-300 {
     &:hover {
@@ -466,10 +432,10 @@ body {
   background-image: radial-gradient(#2c2c2c 0.5px, #1a1a1a 0.5px);
   background-size: 10px 10px;
 }
-@property --tw-border-style {
+@property --tw-space-x-reverse {
   syntax: "*";
   inherits: false;
-  initial-value: solid;
+  initial-value: 0;
 }
 @property --tw-gradient-position {
   syntax: "*";
@@ -517,15 +483,14 @@ body {
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
-  initial-value: solid;
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
+      --tw-space-x-reverse: 0;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
       --tw-gradient-via: #0000;
@@ -536,7 +501,7 @@ body {
       --tw-gradient-via-position: 50%;
       --tw-gradient-to-position: 100%;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
+      --tw-tracking: initial;
     }
   }
 }

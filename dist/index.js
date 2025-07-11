@@ -1,27 +1,57 @@
 const projects = document.querySelector('#projects')
+const technologiesSection = document.querySelector('#technologies')
 
 const works = [
     {
         name: 'Calculator',
-        img: '../img/umbrella.png'
+        img: '../imgs/Calculator.jpeg'
     },
     {
         name: 'To-Do',
-        img: '../img/umbrella.png'
+        img: '../imgs/To-do.jpeg'
     },
     {
         name: 'note-app',
-        img: '../img/umbrella.png'
+        img: '../imgs/Notes.jpeg'
     },
     {
         name: 'MERN-auth',
-        img: '../img/umbrella.png'
+        img: '../imgs/Auth.jpeg'
+    },
+]
+
+const technologies = [
+    {
+        name: 'HTML',
+        img: '../imgs/html.png'
+    },
+    {
+        name: 'CSS',
+        img: '../imgs/css.png'
+    },
+    {
+        name: 'JS',
+        img: '../imgs/js.jpeg'
+    },
+    {
+        name: 'React',
+        img: '../imgs/react.png'
+    },
+    {
+        name: 'Tailwind',
+        img: '../imgs/tailwind.png'
+    },
+    {
+        name: 'Node',
+        img: '../imgs/node.png'
     },
 ]
 
 
 works.forEach((work) => {
     const template = document.createElement('div')
+
+    template.className = 'w-full'
 
     template.innerHTML =  `
                 <div class="w-full h-[18vh] bg-purple-500 flex items-end rounded-md mb-3 relative">
@@ -43,4 +73,15 @@ works.forEach((work) => {
     projects.appendChild(template)
 })
 
-// const template =
+technologies.forEach((technology) => {
+    const template = document.createElement('div')
+
+    template.className = "flex items-center space-x-2";
+
+    template.innerHTML = `
+    <img src="${technology.img}" alt="${technology.name}" class="w-5 h-5" />
+    <p class="text-sm font-semibold">${technology.name}</p>`;
+
+
+    technologiesSection.appendChild(template)
+})
