@@ -1,128 +1,157 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./styles.css" rel="stylesheet">
-  <link rel="icon" href="../imgs/logo.png">
-  <title>
-    <Develope />
-  </title>
-</head>
-<body>
-  <nav class="w-full h-[5vh] fixed top-0 left-0">
-    <img src="../imgs/logo.png" alt="" class="h-10 w-10">
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles.css" rel="stylesheet" />
+    <link rel="icon" href="../imgs/logo.png" />
+    <title><Develope /></title>
+  </head>
+  <body>
+    <nav class="w-full h-[5vh] lg:h-[7vh] fixed top-0 left-0">
+      <img
+        src="../imgs/logo.png"
+        alt=""
+        class="h-10 w-10 lg:h-20 lg:w-20 lg:pl-5"
+      />
+    </nav>
 
-  <div class="p-5 mt-7">
-        <div class=" text-white w-full h-[23vh] flex justify-center rounded-md bg-[#212121] mb-4">
-    
-          <!-- Hero -->
-          <div class="h-full w-[60%] flex items-center p-3 font-semibold">
-            <p class="text-2xl">Bulding Innovative<br /> solutions</p>
-          </div>
-      
-          <div class="w-[40%] ">
-            <img src="../imgs/umbrella.png" alt="" class="h-full w-full">
-          </div>
+    <div class="p-5 lg:px-23 mt-7 lg:mt-17">
+      <div
+        class="text-white w-full h-[23vh] flex justify-center rounded-md bg-[#212121] mb-4 lg:w-[53vw] lg:h-[45vh] lg:translate-x-1/3"
+      >
+        <!-- Hero -->
+        <div
+          class="h-full w-[60%] flex flex-col lg:gap-3 gap-2 justify-center items-start p-3 font-semibold"
+        >
+          <p class="text-2xl lg:text-4xl">
+            Bulding Innovative<br />
+            solutions
+          </p>
+          <p>Lorem consectetur adipis elit.</p>
         </div>
 
-        <!-- About -->
-       <div class="text-white mb-5">
-          <p class="text-xl font-bold mb-2">About Me</p>
+        <div class="w-[40%]">
+          <img src="../imgs/umbrella.png" alt="" class="h-full w-full" />
+        </div>
+      </div>
 
-          <p class="w-98">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus provident dolore eveniet quo 
-            perferendis consectetur. 
-          </p>
-       </div>
+      <!-- About -->
+      <div class="text-white mb-5 lg:w-fit p-5 lg:mt-15">
+        <p class="text-xl font-bold mb-2 lg:text-start lg:text-3xl">About Me</p>
 
-       <!-- Projects && experience -->
+        <img
+          src="../imgs/not ready.png"
+          alt="Not here"
+          class="p-1 border-2 my-4 hidden sm:block translate-x-1 rounded-[100%] lg:relative lg:h-30 lg:w-30"
+        />
 
-       <div class="flex flex-row">
+        <p class="w-98 lg:w-65 lg:text-start">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus
+          provident dolore eveniet quo perferendis consectetur.
+          <button class="bg-black p-3 text-white lg:mt-7 ml-3 lg:ml-0">
+            Learn more about me
+          </button>
+        </p>
+      </div>
 
-       <!-- Projects -->
-       <div class=" h-[51dvh] w-[50%]">
+      <!-- Projects && experience -->
 
-        <div class="text-white h-full flex flex-col">
-          <p class="p-2 font-bold text-xl mb-4">Projects</p>
+      <div class="flex flex-row lg:flex-col">
+        <!-- Projects -->
+        <div class="h-[51dvh] w-[50%]">
+          <div class="text-white h-full lg:h-[40vh] flex flex-col">
+            <p class="p-2 font-bold text-xl mb-4">Projects</p>
 
-          <div class=" w-full overflow-y-auto" id="projects">
-            <!-- Rendered in js -->
-          </div>
-
+            <div class="w-full lg:flex lg:gap-8 overflow-y-auto" id="projects">
+              <!-- Rendered in js -->
+            </div>
           </div>
         </div>
 
         <!-- Experience -->
 
         <div class="w-[50%] p-3 h-[52vh]">
-          <div class="text-white ">
-              <p class="font-bold text-xl mt-7 mb-3">Technologies</p>
+          <div class="text-white">
+            <p class="font-bold text-xl mt-7 mb-3">Technologies</p>
 
-              <div class="grid grid-cols-2 gap-3 scroll-auto" id="technologies">
+            <div class="grid grid-cols-2 gap-3 scroll-auto" id="technologies">
               <!-- Rendered in js -->
-              </div>
+            </div>
           </div>
 
           <div class="text-white">
-              <div>
-                <p class="font-bold text-xl mt-8">Experiences</p>
-                <p class="mb-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing.
-                </p>
-              </div>
-              <button class='bg-black w-fit flex justify-center items-center gap-3 p-3 font-semibold rounded-md'>
-                Download Resume
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
+            <div>
+              <p class="font-bold text-xl mt-8">Experiences</p>
+              <p class="mb-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </p>
+            </div>
+            <button
+              class="bg-black w-fit flex justify-center items-center gap-3 p-3 font-semibold rounded-md"
+            >
+              Download Resume
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
-              </button>
+            </button>
           </div>
-
         </div>
+      </div>
 
-       </div>
+      <!-- contact section -->
 
-       <!-- contact section -->
-
-       <div class="flex justify-center items-center flex-col">
-        <h1 class="text-white text-center mt-5 font-bold text-xl tracking-wider mb-4">Contact me</h1>
+      <div class="flex justify-center items-center flex-col">
+        <h1
+          class="text-white text-center mt-5 font-bold text-xl tracking-wider mb-4"
+        >
+          Contact me
+        </h1>
         <form class="w-[87vw]">
-          <input 
-            type="text" 
-            name="name" 
+          <input
+            type="text"
+            name="name"
             id="name"
             placeholder="Fullname"
             class="w-full p-3 rounded-md mb-3 bg-[#3c3c3c]"
             required
-          >
-          <input 
-            type="email" 
-            name="email" 
+          />
+          <input
+            type="email"
+            name="email"
             id="email"
             placeholder="User Email"
             class="w-full p-3 rounded-md mb-3 bg-[#3c3c3c]"
             required
-          >
-          <textarea 
-            name="info" 
-            id="info" 
+          />
+          <textarea
+            name="info"
+            id="info"
             placeholder="Enter Information about your Gig here"
             class="w-full p-3 rounded-md mb-3 bg-[#3c3c3c] min-h-[14vh]"
             required
           >
           </textarea>
-          <input 
-            type="submit" 
+          <input
+            type="submit"
             value="Submit"
-            class="w-full p-3 rounded-md mb-3 bg-[#000] text-white"
-          >
+            class="w-full p-3 rounded-md mb-3 bg-[#000] text-white cursor-pointer"
+          />
         </form>
-       </div>
-  </div>
-</body>
-<script src="./index.js"></script>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
 </html>
