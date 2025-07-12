@@ -4,22 +4,22 @@ const technologiesSection = document.querySelector("#technologies");
 const works = [
   {
     name: "Calculator",
-    img: "../imgs/Calculator.jpeg",
+    img: "./imgs/Calculator.jpeg",
     description: 'A simple calculator app with basic functions'
 },
 {
     name: "To-Do",
-    img: "../imgs/To-do.jpeg",
+    img: "./imgs/To-do.jpeg",
     description: 'A productivity app to manage your tasks'
 },
 {
     name: "note-app",
-    img: "../imgs/Notes.jpeg",
+    img: "./imgs/Notes.jpeg",
     description: 'A simple app to track and store notes'
 },
 {
     name: "MERN-auth",
-    img: "../imgs/Auth.jpeg",
+    img: "./imgs/Auth.jpeg",
     description: 'A simple authentication app'
   },
 ];
@@ -27,27 +27,27 @@ const works = [
 const technologies = [
   {
     name: "HTML",
-    img: "../imgs/html.png",
+    img: "./imgs/html.png",
   },
   {
     name: "CSS",
-    img: "../imgs/css.png",
+    img: "./imgs/css.png",
   },
   {
     name: "JS",
-    img: "../imgs/js.jpeg",
+    img: "./imgs/js.jpeg",
   },
   {
     name: "React",
-    img: "../imgs/react.png",
+    img: "./imgs/react.png",
   },
   {
     name: "Tailwind",
-    img: "../imgs/tailwind.png",
+    img: "./imgs/tailwind.png",
   },
   {
     name: "Node",
-    img: "../imgs/node.png",
+    img: "./imgs/node.png",
   },
 ];
 
