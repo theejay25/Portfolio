@@ -1,0 +1,3 @@
+text for background of experience div
+
+                  <!-- <p class="absolute font-extrabold tracking-wider text-[6rem] text-white opacity-30 ml-[-3vw] mt-4">BUILD</p> -->

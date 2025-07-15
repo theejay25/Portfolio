@@ -1,0 +1,5 @@
+@layer {
+    .experience-section-button {
+        @apply bg-black w-fit flex justify-center items-center gap-3 p-3 font-semibold rounded-md
+    }
+}

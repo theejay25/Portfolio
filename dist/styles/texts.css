@@ -1,0 +1,9 @@
+@layer {
+    .about-section-header {
+        @apply text-xl font-bold mb-4 lg:text-start lg:text-3xl text-center border-b-1 border-b-[#333] py-1 pb-3
+    }
+    
+    .contact-section-header {
+        @apply text-white text-start mt-5 font-bold text-xl tracking-wider mb-4 border-b-1 border-b-[#333] pb-3 w-full
+    }
+}

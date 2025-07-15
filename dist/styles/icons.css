@@ -1,0 +1,13 @@
+@layer {
+    .whatsapp {
+        @apply  cursor-pointer text-gray-400 hover:bg-[#25d366] rounded-[100%] duration-100 hover:mt-[-1vh] hover:text-white p-3 text-2xl 
+    }
+
+    .linkedin {
+        @apply  cursor-pointer text-gray-400 hover:bg-[#0a66c2] rounded-[100%] duration-100 hover:mt-[-1vh] hover:text-white p-3 text-2xl 
+    }
+
+    .x {
+        @apply  cursor-pointer text-gray-400 hover:bg-[#000000] rounded-[100%] duration-100 hover:mt-[-1vh] hover:text-white p-3 text-2xl 
+    }
+}

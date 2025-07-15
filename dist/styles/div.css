@@ -1,0 +1,17 @@
+@layer {
+    .nav {
+        @apply w-full h-[5vh] lg:h-[7vh] absolute top-0 left-0
+    }
+
+    .hero-section {
+        @apply text-white w-full h-[23vh] flex justify-center rounded-md bg-[#212121] mb-4 lg:w-[53vw] lg:h-[45vh] lg:translate-x-1/3
+    }
+
+    .hero-section-div {
+        @apply h-full w-[60%] flex flex-col lg:gap-3 gap-2 justify-center items-start p-3 font-semibold
+    }
+
+    .experience-innner-div {
+        @apply p-2 bg-[#D8315B33] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[7.6px] border border-[rgba(216,49,91,0.13)] rounded-lg
+    }
+}

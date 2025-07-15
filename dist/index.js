@@ -26,7 +26,7 @@ const works = [
 works.forEach((work) => {
   const template = document.createElement("div");
 //   stopped here
-  template.className = "w-full lg:w-[45vw] flex flex-col mb-3";
+  template.className = "w-full lg:w-[45vw] flex flex-col mb-0";
 
   template.innerHTML = `
     <div class="relative lg:w-full w-[50vw] h-[18vh] bg-black lg:h-[23vh] rounded-md overflow-hidden">

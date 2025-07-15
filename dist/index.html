@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./imgs/logo.png" />
     <title><Develope /></title>
   </head>
   <body class="overflow-x-hidden">
-    <nav class="w-full h-[5vh] lg:h-[7vh] absolute top-0 left-0">
+    <nav class="nav">
       <img
         src="./imgs/logo.png"
         alt=""
@@ -17,12 +18,13 @@
     </nav>
 
     <div class="p-3 lg:px-23 mt-7 lg:mt-17 overflow-x-hidden">
+      <!-- Hero -->
+
       <div
-        class="text-white w-full h-[23vh] flex justify-center rounded-md bg-[#212121] mb-4 lg:w-[53vw] lg:h-[45vh] lg:translate-x-1/3"
+        class="hero-section"
       >
-        <!-- Hero -->
         <div
-          class="h-full w-[60%] flex flex-col lg:gap-3 gap-2 justify-center items-start p-3 font-semibold"
+          class="hero-section-div"
         >
           <p class="text-xl lg:text-4xl">
             Bulding Innovative<br />
@@ -39,18 +41,23 @@
       <!-- About -->
       <div class="text-white mb-5 lg:w-fit py-5 lg:mt-15">
         <p
-          class="text-xl font-bold mb-4 lg:text-start lg:text-3xl text-center border-b-1 border-b-[#333] py-1 pb-3"
+          class="about-section-header"
         >
           About Me
         </p>
 
-        <img
-          src="./imgs/not ready.png"
-          alt="Not here"
-          class="p-1 border-2 my-4 hidden sm:block translate-x-1 rounded-[100%] lg:relative lg:h-30 lg:w-30"
-        />
+    <div class="relative flex justify-center items-center my-4 p-1 ">
+      <div class="size-30 bg-white absolute ml-4 mt-3 z-0"></div>
+      <img
+        src="./imgs/ghost.png"
+        alt="Not here"
+        class="relative h-30 w-30 z-10"
+      />
+    </div>
 
-        <p class="w-90 mb-3 lg:w-65 lg:text-start">
+
+
+        <p class="w-90 mb-3 lg:w-65 lg:text-start text-[#888]">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
           inventore vitae itaque voluptatibus quam nisi cupiditate unde
           deserunt, ipsum exercitationem vero porro aut nam. Eligendi provident
@@ -65,9 +72,9 @@
 
       <div class="flex flex-col">
         <!-- Projects -->
-        <div class="h-[51dvh] w-full">
-          <div class="text-white h-full lg:h-[40vh] flex flex-col">
-            <p class="p-2 font-bold text-xl mb-4">Projects</p>
+        <div class="h-[35dvh] w-full">
+          <div class="text-white h-[45vh] lg:h-[40vh] flex flex-col">
+            <p class="p-2 font-bold text-xl mb-4 border-b-1 pb-3 border-b-[#333]">Projects</p>
 
             <div
               class="w-full flex gap-7 lg:gap-8 overflow-x-auto"
@@ -81,65 +88,139 @@
         
         <!-- Experience -->
         
-        <div class="w-full flex justify-center mt-[-17vh]">
-          <marquee behavior="" direction="left" class="w-[63vw]">
-            <div class="flex flex-row gap-4">
-              <img src="./imgs/html.png" alt="" class="h-7 w-7">
-              <img src="./imgs/css.png" alt="" class="h-7 w-8">
-              <img src="./imgs/js.jpeg" alt="" class="h-7 w-7 ">
-              <img src="./imgs/react.png" alt="" class="h-9 w-10">
-              <img src="./imgs/node.png" alt="" class="h-9 w-13"">
-            </div>
-          </marquee>
-        </div>
-        
+        <div class="text-white mb-4">
+          <div class="mb-3">
+             
+            <p class="font-bold text-xl mb-4 py-3 border-b-1 border-b-[#333]">Experiences</p>
+            
+            <div class="flex justify-end mb-4"> <!--A full experience div-->
+                <div class="bg-white size-4 absolute left-2 rounded-[100%]"></div> <!-- circular div-->
+                <div class="bg-[#212121] w-[85vw] p-3 text-white"> <!--div containing inner div-->
 
-          <div class="text-white">
-            <div>
-              <p class="font-bold text-xl mt-8">Experiences</p>
-              <p class="mb-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </p>
-            </div>
-            <button
-              class="bg-black w-fit flex justify-center items-center gap-3 p-3 font-semibold rounded-md"
-            >
+                  <div class="experience-innner-div">
+                    <p class="text-[16px] text-[#D8315B] font-bold mb-3">Educational Experience</p>
+                    <div class="flex items-start flex-col mb-2">
+                      <div class="size-2 bg-[#E890A6] rounded-[100%] absolute mt-1"></div>
+                      <p class="ml-4 font-semibold text-[#874BB2]" style="text-shadow: 0 0 1px #D5BDF2;">University Education</p>
+                      <p class="ml-4">Masters in computer science<br />Godfrey Okoye University<br /> 2022 - 2026 </p>
+                    </div>
+
+                    <div class="flex items-start flex-col mb-2">
+                      <div class="size-2 bg-[#E890A6] rounded-[100%] absolute mt-1"></div>
+                      <p class="ml-4 font-semibold text-[#874BB2]" style="text-shadow: 0 0 1px #D5BDF2;">Fullstack Certification</p>
+                      <p class="ml-4">Free Code Camp<br /> 2025 </p>
+                    </div>
+
+                    <div class="flex items-start flex-col mb-2">
+                      <div class="size-2 bg-[#E890A6] rounded-[100%] absolute mt-1"></div>
+                      <p class="ml-4 font-semibold text-[#874BB2]" style="text-shadow: 0 0 1px #D5BDF2;">MERN stack Certification</p>
+                      <p class="ml-4">Youtube<br /> 2025 </p>
+                    </div>
+                   
+                  </div> <!--End of inner div-->
+
+                </div> <!-- End of div containing inner div-->
+
+              </div><!--end of full experience div-->
+                
+              <div class="flex justify-end mb-4"> <!--A full experience div-->
+                  <div class="bg-white size-4 absolute left-2 rounded-[100%]"></div> <!-- circular div-->
+                  <div class="bg-[#212121] w-[85vw] p-3 text-white"> <!--div containing inner div-->
+
+                    <div class="experience-innner-div">
+                      <p class="text-[16px] text-[#D8315B] font-bold mb-3">Profexxional Experience</p>
+                      <div class="flex items-start flex-col mb-2">
+                        <div class="size-2 bg-[#E890A6] rounded-[100%] absolute mt-1"></div>
+                        <p class="ml-4 font-semibold text-[#874BB2]" style="text-shadow: 0 0 1px #D5BDF2;">Netfilx</p>
+                        <p class="ml-4">Senior dev<br />Development Department<br /> 2026 - 2030 </p>
+                      </div>
+
+                      <div class="flex items-start flex-col mb-2">
+                        <div class="size-2 bg-[#E890A6] rounded-[100%] absolute mt-1"></div>
+                        <p class="ml-4 font-semibold text-[#874BB2]" style="text-shadow: 0 0 1px #D5BDF2;">Amazon</p>
+                        <p class="ml-4">Directing Manager<br /> 2030 </p>
+                      </div>
+
+                      <div class="flex items-start flex-col mb-2">
+                        <div class="size-2 bg-[#E890A6] rounded-[100%] absolute mt-1"></div>
+                        <p class="ml-4 font-semibold text-[#874BB2]" style="text-shadow: 0 0 1px #D5BDF2;">NASA</p>
+                        <p class="ml-4">Paid intern<br /> 2027 </p>
+                      </div>
+                    
+                    </div> <!--End of inner div-->
+
+                  </div> <!-- End of div containing inner div-->
+
+                </div><!--end of full experience div-->
+
+          </div>
+              <button
+              class="experience-section-button"
+              >
               Download Resume
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               >
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
-            </button>
-          </div>
-        </div>
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+           </button>
       </div>
+    </div>
+<!-- 
+    <div class="w-full flex justify-center mt-[-17vh]">
+    <marquee behavior="" direction="left" class="w-[63vw]">
+      <div class="flex flex-row gap-4">
+        <img src="./imgs/html.png" alt="" class="h-7 w-7">
+        <img src="./imgs/css.png" alt="" class="h-7 w-8">
+        <img src="./imgs/js.jpeg" alt="" class="h-7 w-7 ">
+        <img src="./imgs/react.png" alt="" class="h-9 w-10">
+        <img src="./imgs/node.png" alt="" class="h-9 w-13"">
+      </div>
+    </marquee>
+  </div> -->
 
-      <!-- contact section -->
-
-      <div class="flex justify-center items-center flex-col">
+  </div>
+  
+  <!-- contact section -->
+  
+    <div class="flex justify-center text-[#888] px-3 items-center flex-col">
         <h1
-          class="text-white text-center mt-5 font-bold text-xl tracking-wider mb-4"
+          class="contact-section-header"
         >
-          Contact me
+          Get in Touch
         </h1>
+
+        <p class="mb-3 text-center">
+          you can get in touch with me, Lets discuss how to bring your ideas to life.<br />Reach out to me through:
+        </p>
+
+        <div class="flex flex-row justify-center items-center gap-6 p-3">
+          <p class="whatsapp fab fa-whatsapp" title="WhatsApp"></p>
+          <p class="linkedin fab fa-linkedin" title="LinkedIn"></p>
+          <p class="x fab fa-x-twitter" title="X"></p>
+        </div>
+
+        <fieldset class="border-t-1 border-[#333] w-full mb-4">
+          <legend class="text-white text-center px-3">OR</legend>
+        </fieldset>
+
         <form class="w-[87vw]">
           <input
             type="text"
             name="name"
             id="name"
             placeholder="Fullname"
-            class="w-full p-3 rounded-md mb-3 bg-[#3c3c3c]"
+            class="w-full p-3 rounded-md mb-3 bg-[#3c3c3c] text-white"
             required
           />
           <input
@@ -147,14 +228,14 @@
             name="email"
             id="email"
             placeholder="User Email"
-            class="w-full p-3 rounded-md mb-3 bg-[#3c3c3c]"
+            class="w-full p-3 rounded-md mb-3 bg-[#3c3c3c] text-white"
             required
           />
           <textarea
             name="info"
             id="info"
             placeholder="Enter Information about your Gig here"
-            class="w-full p-3 rounded-md mb-3 bg-[#3c3c3c] min-h-[14vh]"
+            class="w-full p-3 rounded-md mb-3 bg-[#3c3c3c] text-white min-h-[14vh]"
             required
           >
           </textarea>
@@ -164,8 +245,10 @@
             class="w-full p-3 rounded-md mb-3 bg-[#000] text-white cursor-pointer"
           />
         </form>
-      </div>
-    </div>
-  </body>
+      </div> <!-- End contact form wrapper -->
+    </div> <!-- End contact section -->
+  </div> <!-- End main content wrapper -->
+
   <script src="./index.js"></script>
+</body>
 </html>

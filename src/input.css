@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@import '../dist/styles/div.css';
+@import '../dist/styles/texts.css';
+@import '../dist/styles/buttons.css';
+@import '../dist/styles/icons.css';
+
 body {
     background-color: #e5e5f7;
     opacity: 0.8;
