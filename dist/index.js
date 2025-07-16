@@ -1,50 +1,107 @@
 const projects = document.querySelector("#projects");
+const textarea = document.querySelector('#info')
+const body = document.querySelector('body')
 
+const placeholderText = "Enter Information about your project here"
+
+const originalBody = body.innerHTML;
+
+function showDeviceWarning() {
+  const template = `
+    <div class='h-[100dvh] p-6 w-full flex justify-center items-center gap-6 flex-col'>
+      <img src='./imgs/not ready.png' alt='image not ready' class='size-40' />
+      <p class='text-white text-lg text-center'>We're sorry but this site is not optimized for your device,<br /> We are currently working on it</p>
+    </div>
+  `;
+  body.innerHTML = template;
+}
+
+function restoreBody() {
+  body.innerHTML = originalBody;
+}
+
+function renderWorks() {
+  const projects = document.querySelector("#projects");
+  if (!projects) return; // Don't render if projects element doesn't exist
+
+  works.forEach((work) => {
+    const template = document.createElement("div");
+    template.className = "w-full lg:w-[49vw]";
+    template.innerHTML = `
+      <div class="p-3 h-[60vh] bg-zinc-800 w-[73vw] lg:w-[25vw] lg:h-[55vh]">
+        <div class="h-[27vh] rounded-md w-full overflow-hidden">
+          <img src=${work.img} alt=${work.name} class="object-cover " />
+        </div>
+        <div class="mt-8">
+          <h1 class="font-bold mb-2">${work.name}</h1>
+          <p class="text-[#777] mb-2 font-semibold">${work.description}</p>
+          <div class="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 gap-2 mb-2">
+            ${work.languages.map(language => `<p class="font-semibold text-purple-400">${language}</p>`).join("")}
+          </div>
+          <button class="px-3 py-2 rounded-md cursor-pointer bg-[#A3324E] font-bold w-full">
+            <i class="fa-solid fa-paperclip mr-2"></i>
+            View Page
+          </button>
+        </div>
+      </div>
+    `;
+    projects.appendChild(template);
+  });
+}
+
+function checkWidthAndUpdate() {
+  const width = window.innerWidth;
+  if (width > 425 && width < 1024) {
+    showDeviceWarning();
+  } else {
+    restoreBody();
+    renderWorks();
+  }
+}
+
+window.addEventListener('resize', checkWidthAndUpdate);
+document.addEventListener('DOMContentLoaded', checkWidthAndUpdate);
+
+
+textarea.addEventListener('blur', () => {
+  if (textarea.value === '') {
+    textarea.value = placeholderText;
+    textarea.classList.remove('text-white');
+    textarea.classList.add('text-[#777]');
+  }
+});
+
+textarea.addEventListener('focus', () => {
+  if (textarea.value === placeholderText) {
+    textarea.value = '';
+    textarea.classList.remove('text-[#777]');
+    textarea.classList.add('text-white');
+  }
+});
 const works = [
   {
     name: "Calculator",
     img: "./imgs/Calculator.jpeg",
-    description: 'A simple calculator app with basic functions'
-},
-{
+    description: "A simple calculator app with basic functions",
+    languages: ["HTML", "CSS", "JavaScript"],
+  },
+  {
     name: "To-Do",
     img: "./imgs/To-do.jpeg",
-    description: 'A productivity app to manage your tasks'
-},
-{
+    description: "A productivity app to manage your tasks",
+    languages: ["HTML", "CSS", "JavaScript"],
+  },
+  {
     name: "note-app",
     img: "./imgs/Notes.jpeg",
-    description: 'A simple app to track and store notes'
-},
-{
+    description: "A simple app to track and store notes",
+    languages: ["React", "Express", "MongoDB", "Node"],
+  },
+  {
     name: "MERN-auth",
     img: "./imgs/Auth.jpeg",
-    description: 'A simple authentication app'
+    description:
+      "A simple authentication app built with the technologies of MERN",
+    languages: ["React", "Express", "Mongo DB", "Node"],
   },
 ];
-
-works.forEach((work) => {
-  const template = document.createElement("div");
-//   stopped here
-  template.className = "w-full lg:w-[45vw] flex flex-col mb-0";
-
-  template.innerHTML = `
-    <div class="relative lg:w-full w-[50vw] h-[18vh] bg-black lg:h-[23vh] rounded-md overflow-hidden">
-      <img src="${work.img}" alt="${work.name}" class="absolute top-0 left-0 h-full w-full object-cover rounded-md" />
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
-      <a href="#" class="absolute top-2 right-2 text-white hover:text-gray-300">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black bg-[rgba(0,0,0,0.2)] p-1 rounded-md" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M13 7h4a2 2 0 012 2v8a2 2 0 01-2 2h-8a2 2 0 01-2-2v-4M7 7h.01M7 7l10 10" />
-        </svg>
-      </a>
-    </div>
-
-    <div class=" z-10 mt-2 text-white">
-      <p class="font-bold lg:mt-0 lg:ml-0 ml-3 mt-[-4vh]">${work.name}</p>
-      <p class="hidden lg:block text-sm text-gray-300">${work.description}</p>
-    </div>
-  `;
-
-  projects.appendChild(template);
-});
