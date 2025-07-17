@@ -51,7 +51,7 @@ function renderWorks() {
 
 function checkWidthAndUpdate() {
   const width = window.innerWidth;
-  if (width > 425 && width < 1024) {
+  if (width > 475 && width < 1024) {
     showDeviceWarning();
   } else {
     restoreBody();
